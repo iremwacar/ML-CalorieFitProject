@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalori Hesaplama</title>
+    <!-- Bootstrap CSS Bağlantısı -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3+8b5v5tPj+2F5B0mXh8vVbc1oxEYISFip7Ht55yYJowc/7n1/X6Imc4C" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #c8e6c9; /* Soft light background */
+            font-family: 'Arial', sans-serif;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://www.example.com/fruit-vegetable-background.jpg'); /* Meyve ve sebze temalı arka plan */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Sayfanın içi beyaz şeffaf */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #388e3c; /* Yeşil tonları */
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-control {
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .footer img {
+            width: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Yiyecek Kalori Hesaplama</h1>
+    <form action="/predict" method="post">
+        <div class="form-group">
+            <label for="enerji">Enerji (kcal):</label>
+            <input type="number" name="enerji" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="yag">Yağ (g):</label>
+            <input type="number" name="yag" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="doymus_yag">Doymuş Yağ (g):</label>
+            <input type="number" name="doymus_yag" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="karbonhidrat">Karbonhidrat (g):</label>
+            <input type="number" name="karbonhidrat" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="seker">Şeker (g):</label>
+            <input type="number" name="seker" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="lif">Lif (g):</label>
+            <input type="number" name="lif" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="protein">Protein (g):</label>
+            <input type="number" name="protein" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Tahmin Et</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS Bağlantısı -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
